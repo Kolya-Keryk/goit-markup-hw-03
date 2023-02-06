@@ -61,10 +61,16 @@ ul {
 .row-btn:focus {
   background: #404bbf;
   color: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: #404bbf;
+}
+.section{
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .header {
   padding-top: 24px;
@@ -132,9 +138,6 @@ ul {
 /* --------------HERO */
 .hero {
   background: var(--section-background);
-  margin-bottom: 120px;
-}
-.hero-container {
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
@@ -161,12 +164,11 @@ ul {
   background-color: var(--btn-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  min-width: 169px;
-  height: 56px;
+  padding: 16px 32px;
+  border: none;
 }
 /* ----------------Flower */
 .flower {
-  margin-bottom: 120px;
 }
 .flower-list {
   display: flex;
@@ -174,6 +176,7 @@ ul {
   align-items: center;
 }
 .flower-item {
+  flex-basis: calc((100% - 72px) / 4);
 }
 .flower-title {
   font-weight: 500;
@@ -188,12 +191,10 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-suptitle-color);
-  min-width: 264px;
-  min-height: 72px;
 }
 /* -------------APPLE */
 .apple {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 .apple-title {
   font-size: 36px;
@@ -210,12 +211,10 @@ ul {
   align-items: center;
 }
 .apple-item {
-  width: calc((100%-48) / 3);
+  flex-basis: calc((100% - 48px) / 3);
 }
 /*--------- SKY */
 .sky {
-  padding-top: 120px;
-  padding-bottom: 120px;
   background: var(--background-personal-container);
 }
 .sky-title {
@@ -237,8 +236,11 @@ ul {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
-  width: calc((100%-72) / 4);
-  min-height: 380px;
+  flex-basis: calc((100% - 72px) / 4);
+}
+.sky-headline-box {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .sky-headline {
   font-weight: 500;
@@ -247,7 +249,6 @@ ul {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--all-title-color);
-  margin-top: 32px;
   margin-bottom: 8px;
 }
 .sky-suptitle {
@@ -271,7 +272,6 @@ ul {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--logo-color);
-  margin-bottom: 16px;
 }
 .f-logo {
   color: var(--f-logo-color);
@@ -282,17 +282,21 @@ ul {
   letter-spacing: 0.02em;
   color: var(--footer-text-color);
   max-width: 264px;
-  min-height: 72px;
+  margin-top: 16px;
 }
 /* --------PORTFOLIO */
+.header-portfolio{
+  border: 1px solid #E7E9FC;
+}
+.container-portfolio{
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
 .row {
 }
-.btn-container {
-  margin-top: 96px;
-  margin-bottom: 72px;
-  min-width: 586px;
-  min-height: 48px;
-  justify-content:center
+.header-container-portfolio {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .row-btn {
   font-family: "Roboto", sans-serif;
@@ -303,12 +307,13 @@ ul {
   cursor: pointer;
   color: var(--btn-portfolio-background-color);
   background: var(--background-btn-portfolio);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  min-width: 69px;
-  min-height: 48px;
   border: 1px solid #e7e9fc;
+  padding: 12px 24px;
+  border: none;
+}
+.photo-portfolio{
+  display: block;
 }
 .row-all-title {
   font-weight: 500;
@@ -316,25 +321,20 @@ ul {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--all-title-color);
-  margin-top: 32px;
   margin-bottom: 8px;
-  min-width: 290px;
-  min-height: 24px;
 }
 .row-all-suptitle {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--main-suptitle-color);
-  margin-bottom: 32px;
-  min-width: 30px;
-  min-height: 24px;
 }
 .row-btn-list {
   display: flex;
   gap: 24px;
   align-items: flex-start;
   justify-content: center;
+  margin-bottom: 72px;
 }
 .row-btn-item {
 }
@@ -343,13 +343,16 @@ ul {
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
-  min-width: 360px;
-  min-height: 420px;
-  border: 1px solid #e7e9fc;
-  margin-bottom: 120px;
 }
 .row-item {
-  width: calc((100% - 48px) / 3) ; 
+  flex-basis: calc((100% - 48px) / 3);
+}
+.row-item-box {
+border: 1px solid #E7E9FC;
+padding-top: 32px;
+padding-bottom: 32px;
+padding-left: 16px;
+border-top: none;
 }
 /* .row-one-item-title {
 }
